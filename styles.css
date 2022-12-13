@@ -5,7 +5,16 @@
   }
   
   /*HEADER and NAVBAR CSS*/
-  
+
+  /*Still margin around header, need to find a way to remove */
+
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0;
+  }  
+
   header {
     display: flex;
     background-color: #4d5d53;
@@ -15,12 +24,11 @@
     padding-left: 20px;
     padding-top: 20px;
     height: 80px;
-    margin: 0;
+    margin-top: -20px;
 
   }
 
   .nav-left {
-    margin: 0;
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -28,7 +36,7 @@
   }
   
   .nav-middle {
-    margin: 0;
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,12 +44,10 @@
   }
   
   .nav-right {
-    margin: 0;
     flex: 1;
   }
 
   #header-img {
-    margin: 0;
     width: 80px;
     height: 80px;
 
@@ -54,10 +60,11 @@
   }
 
   .nav-link {
-    margin: 0;
+    margin: 0px;
+    height: 80px;
     color: white;
+    padding: 0 4em;
     font-size: 1em;
-    padding: 4em;
     text-decoration: none;
     letter-spacing: 0.5px
     
@@ -67,38 +74,32 @@
   .nav-link::after {
     content: "";
     position: absolute;
-    height: 3px;
+    height: 1px;
     width: 100%;
     background-color: white;
     transition: 0.5s; 
-    margin: 0;
-   
   }
   
   .nav-link:after {
     left: 0;
-    bottom: -5px;
-    margin: 0;
+    bottom: -3px;
     
   }
   
   .nav-link:before {
     right: 0px;
-    top: -5px;
-    margin: 0;
+    top: -3px;
    
   }
   
   .nav-link:hover {
     background-color: white;
-    color: #B1BCA0;
-    margin: 0;
+    color: #4d5d53;
   }
   
   #nav-bar li {
     display: inline;
     position: relative;
-    margin: 0;
   }
   
   /*Main CSS*/
@@ -167,7 +168,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     justify-content: space-evenly;    
-    align-items: center;
+    align-items: flex-start;
+    
   }
 
 
@@ -176,13 +178,21 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    text-align: center;
+    border: 1px solid #4d5d53;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .item2 {
-    grid-column: 3 / 4
+    grid-column: 3 / 4;
     width: 100%;
     height: auto;
     object-fit: fill;
+    text-align: center;
+    border: 1px solid #4d5d53;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .item3 {
@@ -190,6 +200,10 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    text-align: center;
+    border: 1px solid #4d5d53;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   
@@ -212,7 +226,7 @@
   footer {
     display: flex;
     background-color: #4d5d53;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-bottom: 20px;
     padding-left: 20px;
