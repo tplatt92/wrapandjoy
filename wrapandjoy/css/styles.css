@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    margin: 0;
+  }
+  
+  /*HEADER and NAVBAR CSS*/
+  
+  header {
+    display: flex;
+    background-color: #B1BCA0;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 75px;
+  }
+
+  .nav-left {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-middle {
+    display: flex;
+  }
+  
+  .nav-right {
+    flex: 1;
+  }
+
+  #header-img {
+    width: 80px;
+    height: 80px;
+
+  }
+
+  .nav-link {
+    margin: 0;
+    color: white;
+    font-size: 1em;
+    padding: 3.5em;
+    text-decoration: none;
+    letter-spacing: 0.5px
+  }
+  
+  .nav-link::before,
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: 0.5s; 
+  }
+  
+  .nav-link:after {
+    left: 0;
+    bottom: -10px;
+  }
+  
+  .nav-link:before {
+    right: 0px;
+    top: -10px;
+  }
+  
+  .nav-link:hover {
+    background-color: white;
+    color: #B1BCA0;
+  }
+  
+  #nav-bar li {
+    display: inline;
+    position: relative;
+  }
+  
+  /*Main CSS*/
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 3rem;
+  
+  }
+  
+  .title {
+    grid-column: 1 / 3; 
+    text-align: center;
+    padding: 20px;
+    font-size: 3.5em;
+    color: #897D6B;
+    border: solid 3px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .product-list li {
+    list-style: none;
+    font-size: 2rem
+  }
+  
+  .product-list {
+    background-color: #B1BCA0;
+    color: white;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-left: 10px;
+    border-radius: 20px;
+  }
+  
+  .form1 {
+    grid-column: 1 / 3;
+    display: grid;
+    justify-items: center;
+    padding: 30px;
+    margin-bottom: 100px;
+    background-color: #B1BCA0;
+    color: white;
+    border-radius: 20px;
+  }
+  
+    
+  @media only screen and (max-width: 500px) {
+    main {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 3rem;
+    }
+  
+  }
